@@ -43,15 +43,23 @@ Resources:
             Path: /
             Method: GET
             RestApiId: !Ref api
+        Timer:
+          Type: Schedule
+          Properties:
+            Schedule: cron(* * * * ? *)
+          Metadata:
+            StackeryName: Test Timer
     Metadata:
       StackeryName: getWelcomePage
 Parameters:
   StackeryStackTagName:
     Type: String
     Description: Stack Name (injected by Stackery at deployment time)
+    Default: automatic-campaigns
   StackeryEnvironmentTagName:
     Type: String
     Description: Environment Name (injected by Stackery at deployment time)
+    Default: dev
   StackeryEnvironmentAPIGatewayStageName:
     Type: String
     Description: Environment name used for API Gateway Stage names (injected by Stackery at deployment time)
