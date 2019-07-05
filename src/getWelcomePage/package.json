@@ -1,5 +1,7 @@
 {
   "name": "test-function",
+  "version": "1.0.0",
+  "description": "A test project for an stack",
   "private": true,
   "dependencies": {
     "aws-sdk": "~2"
