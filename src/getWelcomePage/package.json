@@ -1,4 +1,5 @@
 {
+  "name": "test-function",
   "private": true,
   "dependencies": {
     "aws-sdk": "~2"
